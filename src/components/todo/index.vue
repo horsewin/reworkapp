@@ -7,13 +7,21 @@
     ></text-input>
     <button :on-press="saveMessage" title="Save"></button>
     <button :on-press="removeMessage" title="Delete"></button>
+    <todo-item
+      class="text-color-primary"
+      v-for="message in messages"
+      :key="message"
+      :item="message"
+    />
   </view>
 </template>
 
 <script>
     import Store from "../../store";
+    import TodoItem from "./todo-item.vue";
 
     export default {
+  components: { TodoItem },
   data: function() {
     return {
       messageText: ""

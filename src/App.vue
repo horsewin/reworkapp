@@ -1,17 +1,22 @@
 <template>
-  <view>
-    <text>{{ message }}</text>
-  </view>
+  <app-navigation></app-navigation>
 </template>
 
 <script>
+    import React from "react";
+    import {StackNavigator} from "vue-native-router";
+    import TodoScreen from "./components/todo/index.vue";
 
-    export default {
-  // components: { AppNavigation }
-  data: function() {
-    return {
-      message: "hogehoge"
-    };
+    const AppNavigation = StackNavigator(
+  {
+    Todo: { screen: TodoScreen }
+  },
+  {
+    initialRouteName: "Todo"
   }
+);
+
+export default {
+  components: { AppNavigation }
 };
 </script>

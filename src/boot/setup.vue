@@ -3,16 +3,18 @@
     <app></app>
   </view>
 </template>
+
 <script>
     import App from "../App.vue";
 
     export default {
-  component: { App }
+  components: { App }
 };
 </script>
 
 <style>
 .container {
   flex: 1;
+  padding: 30;
 }
 </style>
