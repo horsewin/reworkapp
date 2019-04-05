@@ -5,9 +5,9 @@
 </template>
 
 <script>
-    import App from "../App.vue";
+import App from "../App.vue";
 
-    export default {
+export default {
   components: { App }
 };
 </script>
