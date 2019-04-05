@@ -3,9 +3,9 @@
 </template>
 
 <script>
-    import Setup from "./src/boot/setup.vue";
+import Setup from "./src/boot/setup.vue";
 
-    export default {
+export default {
   components: { Setup }
 };
 </script>

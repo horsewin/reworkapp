@@ -3,11 +3,11 @@
 </template>
 
 <script>
-    import React from "react";
-    import {StackNavigator} from "vue-native-router";
-    import TodoScreen from "./components/todo/index.vue";
+import React from "react";
+import { StackNavigator } from "vue-native-router";
+import TodoScreen from "./components/todo/index.vue";
 
-    const AppNavigation = StackNavigator(
+const AppNavigation = StackNavigator(
   {
     Todo: { screen: TodoScreen }
   },

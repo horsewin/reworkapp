@@ -17,10 +17,10 @@
 </template>
 
 <script>
-    import Store from "../../store";
-    import TodoItem from "./todo-item.vue";
+import Store from "../../store";
+import TodoItem from "./todo-item.vue";
 
-    export default {
+export default {
   components: { TodoItem },
   data: function() {
     return {
