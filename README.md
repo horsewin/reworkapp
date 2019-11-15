@@ -1,2 +1,2 @@
 # reworkapp
-https://github.com/horsewin/reworkapp/workflows/CI/badge.svg
+![](https://github.com/horsewin/reworkapp/workflows/CI/badge.svg)
