@@ -1,17 +1,11 @@
-name: CI
-on:
-  push:
-    branches:
-    - master
-    - release/*
+name: 'Auto Assign'
+on: pull_request
+
 jobs:
-  build:
+  add-reviews:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      - uses: kentaro-m/auto-assign-action@v1.0.1
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          addAssignees: author
