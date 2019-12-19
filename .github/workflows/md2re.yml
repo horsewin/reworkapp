@@ -1,0 +1,22 @@
+name: md2re
+on:
+  push:
+    branches:
+    - master
+    - release/*
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: docker run --rm -v `pwd`/.:/work nuitsjp/md2review /bin/sh -c "cd /work && md2review test.md > test.re"
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Add changes" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
