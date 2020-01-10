@@ -28,7 +28,7 @@ jobs:
         ./scripts/test.sh dev
     - name: Commit files
       run: |
-        git config --local user.email "robot@boostry.co.jp"
+        git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add .
         git commit -m 'Robot: app version up'
