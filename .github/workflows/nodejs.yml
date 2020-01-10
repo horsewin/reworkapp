@@ -1,4 +1,4 @@
-name: Node CI
+name: version up ci
 
 on: [push]
 
@@ -21,8 +21,10 @@ jobs:
       run: |
         sudo apt-get -y update
         sudo apt-get -y install jq
-        echo '{"name":"value"}' > hoge.json
-        cat hoge.json | jq .name
+        ./scripts/update_version.sh dev
+        git add .
+        git commit -m 'Robot: app version up'
+        git push origin HEAD:master
         
       env:
         CI: true
