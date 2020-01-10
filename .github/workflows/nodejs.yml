@@ -21,7 +21,7 @@ jobs:
       run: |
         sudo apt-get -y update
         sudo apt-get -y install jq
-        ./scripts/update_version.sh dev
+        ./scripts/test.sh dev
         git add .
         git commit -m 'Robot: app version up'
         git push origin HEAD:master
