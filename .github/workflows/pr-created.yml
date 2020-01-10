@@ -2,7 +2,7 @@ name: PR_CREATED
 
 on:
   pull_request:
-    types: [created]
+    types: [opened]
 
 jobs:
   build:
