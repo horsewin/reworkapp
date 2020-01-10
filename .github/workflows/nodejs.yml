@@ -17,16 +17,26 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: npm install, build
       run: |
         sudo apt-get -y update
         sudo apt-get -y install jq
         echo [INFO] DONE INSTALL
+    - name: Update task
+      run: |
         chmod +x ./scripts/test.sh
         ./scripts/test.sh dev
+    - name: Commit files
+      run: |
+        git config --local user.email "robot@boostry.co.jp"
+        git config --local user.name "GitHub Action"
         git add .
         git commit -m 'Robot: app version up'
         git push origin HEAD:master
-        
-      env:
-        CI: true
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+    
+    env:
+      CI: true
