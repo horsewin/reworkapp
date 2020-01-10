@@ -4,3 +4,5 @@
 Github actions の遊び場
 
 - test ge
+- created published
+  - hoghogehoge

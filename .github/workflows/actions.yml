@@ -1,11 +1,7 @@
 name: CI
 on:
   pull_request:
-    branches: 
-      - master
-    types:
-      - created
-      - published
+    types: [closed]
 
 jobs:
   build:
