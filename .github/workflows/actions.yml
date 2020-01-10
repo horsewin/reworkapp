@@ -3,9 +3,8 @@ on:
   pull_request:
     branches: 
       - master
-    types:
-      - created
-      - published
+    paths: 
+      - 'README.md'
 
 jobs:
   build:
