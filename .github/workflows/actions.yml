@@ -1,8 +1,8 @@
 name: CI
 on:
   pull_request:
-    types:
-      - created
+    paths: 
+      - README.md
 
 jobs:
   build:
