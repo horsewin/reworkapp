@@ -22,8 +22,7 @@ jobs:
         sudo apt-get -y update
         sudo apt-get -y install jq
         echo [INFO] DONE INSTALL
-        ls
-        ls -al ./scripts
+        chmod +x ./scripts/test.sh
         ./scripts/test.sh dev
         git add .
         git commit -m 'Robot: app version up'
