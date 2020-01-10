@@ -19,10 +19,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
-        apt-get -y update
-        apt-get -y install jq
+        sudo apt-get -y update
+        sudo apt-get -y install jq
         echo '{"name":"value"}' > hoge.json
-        npm ci
         cat hoge.json | jq .name
         
       env:
