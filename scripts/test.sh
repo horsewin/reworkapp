@@ -1,6 +1,7 @@
 #!/bin/sh
 set -ex
 
+ls -al
 # バージョン情報の取得と生成
 version=$(cat ./package.json | jq -r .version)
 
