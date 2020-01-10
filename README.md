@@ -4,5 +4,3 @@
 Github actions の遊び場
 
 - test
-  - hoge
-  - hoghoge
