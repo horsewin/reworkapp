@@ -2,7 +2,7 @@ name: CI
 on:
   pull_request:
     paths: 
-      - README.md
+      - '**/*.md'
 
 jobs:
   build:
