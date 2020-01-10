@@ -18,4 +18,4 @@ fi
 
 NEW_VERSION_NAME="${major}.${minor}.${patch}"
 
-echo ${NEW_VERSION_NAME}
+echo ${NEW_VERSION_NAME} > version.json
