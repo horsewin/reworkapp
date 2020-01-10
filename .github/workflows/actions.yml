@@ -1,8 +1,8 @@
 name: CI
 on:
   pull_request:
-    paths: 
-      - '**/*.md'
+    branches: 
+      - master
 
 jobs:
   build:
