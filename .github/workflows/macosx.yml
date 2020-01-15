@@ -24,7 +24,7 @@ jobs:
         npm install yarn@1.19.1 react-native-cli@2.0.1
     - name: rn install
       run: |
-        echo "### Create React Native project ###"
-        npx react-native init RN0591 --version 0.59.10
+        ls
+        ./node_modules/.bin/react-native init RN0591 --version 0.59.10
       env:
         CI: true
