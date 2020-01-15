@@ -1,0 +1,30 @@
+name: macos Node
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: 	macos-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install
+      run: |
+        npm ci
+        npm install npm@6.11.3
+        npm install yarn@1.19.1 react-native-cli@2.0.1
+    - name: rn install
+      run: |
+        echo "### Create React Native project ###"
+        npx react-native init RN0591 --version 0.59.10
+      env:
+        CI: true
