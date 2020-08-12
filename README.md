@@ -11,6 +11,5 @@ fugafuga
 
 あああ
 いいい
-
 uuu
 eee
