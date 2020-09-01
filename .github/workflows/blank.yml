@@ -1,0 +1,18 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: npm install, build, and test
+        run: |
+          npm install
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: node-modules
+          path: node_modules
