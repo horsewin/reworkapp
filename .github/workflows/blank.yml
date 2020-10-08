@@ -11,6 +11,8 @@ jobs:
       - name: npm install, build, and test
         run: |
           system_profiler SPHardwareDataType
+          defaults write com.apple.dt.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks 8
+          defaults read com.apple.dt.Xcode | grep Concurrent
 #       - name: Archive production artifacts
 #         uses: actions/upload-artifact@v2
 #         with:
